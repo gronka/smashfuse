@@ -8,15 +8,15 @@ shared static this()
 
 	auto smashsettings = new SmashFuseSettings;
 	smashsettings.configName = "smashfuse";
-	smashsettings.siteUrl = URL("http://127.0.0.1:8080/");
+	smashsettings.siteUrl = URL("http://127.0.0.1:9090/");
 	registerSmashFuse(smashsettings, router);
 
 
 	auto settings = new HTTPServerSettings;
-	settings.port = 8080;
+	settings.port = 9090;
 	listenHTTP(settings, router);
 
-	logInfo("Please open http://127.0.0.1:8080/ in your browser.");
+	logInfo("Hosting on http://127.0.0.1:9090/");
 }
 
 //void hello(HTTPServerRequest req, HTTPServerResponse res)
