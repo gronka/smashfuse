@@ -1,0 +1,9 @@
+extends "../base"
+
+block title
+	- import vibe.inet.message;
+	- auto title = "Landing";
+
+block body
+	p the body
+

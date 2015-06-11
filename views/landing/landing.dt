@@ -1,0 +1,22 @@
+extends base
+
+block title
+	- import vibe.inet.message;
+	- auto title = "SmashFuse - Get Searching ";
+
+block body
+	section.frontpage-upper(data-speed="2", data-type="background")
+		div.container
+			div.row.text-center#frontpage-title-block
+				img(src="#{req.rootDir}images/dotmos_web_2014.png")
+
+			div.row
+				form.form-group(role="search", method="GET", action="/search")
+					div.col-xs-12.col-md-6.col-md-offset-3
+						div.input-group.row.text-center#frontpage-search-block
+							//-div.row.text-center#frontpage-search(accept-charset='UTF-8')
+							input.form-control#frontpage-search-input(name='q', type='text', placeholder="Search Query")
+							div.input-group-btn#frontpage-search-btn
+								button.btn.btn-default(type="submit")
+									i.glyphicon.glyphicon-search
+

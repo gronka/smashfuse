@@ -1,0 +1,21 @@
+!!! 5
+html
+	head
+		block title
+		link(rel="stylesheet", type="text/css", href="#{req.rootDir}css/libs/bootstrap.css")
+		link(rel="stylesheet", type="text/css", href="#{req.rootDir}css/libs/bootstrapstyle.css")
+		link(rel="stylesheet", type="text/css", href="#{req.rootDir}css/libs/jquery-ui.min.css")
+		link(rel="stylesheet", type="text/css", href="#{req.rootDir}css/style.css")
+		link(rel="stylesheet", type="text/css", href="#{req.rootDir}css/offsets.css")
+		title #{title}
+	body
+		block body
+
+	
+	script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+	script(type="text/javascript", src="#{req.rootDir}js/libs/bootstrap.js")
+	script(type="text/javascript", src="#{req.rootDir}js/libs/jquery-ui.min.js")
+	script(type="text/javascript", src="#{req.rootDir}js/libs/scrollReveal-2.2.0.js")
+	script(type="text/javascript", src="#{req.rootDir}js/smashfuse.js")
+
+
