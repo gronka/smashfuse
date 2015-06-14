@@ -1,0 +1,7 @@
+extends layout
+
+block body
+	#smashfuseRecentList
+		block smashfuse-recent-list
+
+	block smashfuse-content

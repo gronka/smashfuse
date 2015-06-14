@@ -4,6 +4,11 @@ import smashfuse.smashfuse;
 
 shared static this()
 {
+	import etc.linux.memoryerror;
+	static if (is(typeof(registerMemoryErrorHandler)))
+	registerMemoryErrorHandler();
+
+
 	auto router = new URLRouter;
 
 	auto smashsettings = new SmashFuseSettings;

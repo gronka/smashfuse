@@ -197,6 +197,13 @@ $(function() {
 	});  // end section function
 
 
+		var query = $('#query').html();
+
+		//var el = document.getElementById('query-stream-block');
+		//refreshSearch(query, $('#query-stream-block'));
+		var el = document.getElementById('query-stream-block');
+		//refreshSearch(query, $('#query-stream-block'));
+
 	$(window).bind("load", function() {
 		$.ajaxSetup({
 			type: 'POST',
@@ -209,5 +216,10 @@ $(function() {
 			}
 		});
 	});
+
+		var el = document.getElementById('query-stream-block');
+		var query = $('#query').html();
+		refreshSearch(query, $('#query-stream-block'));
+
 
 });

@@ -6,5 +6,6 @@
 	"dependencies": {
 		"vibe-d": "~>0.7.19"
 	},
-	"versions": ["VibeDefaultMain"]
+	"versions": ["VibeDefaultMain"],
+	"lflags": ["/usr/lib64/libcurl.so", "/usr/lib64/libmhash.so"]
 }
