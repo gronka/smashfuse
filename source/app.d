@@ -18,6 +18,7 @@ shared static this()
 
 
 	auto settings = new HTTPServerSettings;
+	settings.options |= HTTPServerOption.distribute;
 	settings.port = 9090;
 	listenHTTP(settings, router);
 

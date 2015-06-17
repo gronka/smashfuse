@@ -3,8 +3,11 @@ block content
 	section.searchpage-results(data-speed="2", data-type="background")
 		div.container
 			div.row.margin-top-40px
-				p#query #{ query }
-				a#add-query-stream-item add item
-				a#query-stream-refresh refresh search
-				a#query-stream-apply-filters apply filters
+				div#query #{ query }
+				//-a#add-query-stream-item add item
+				//-a#query-stream-refresh refresh search
+				//-a#query-stream-apply-filters apply filters
 				div#query-stream-block
+				div#query-stream-waypoint
+					button.btn.btn-lg#query-stream-waypoint-button(type="button") More Results
+				div#footer

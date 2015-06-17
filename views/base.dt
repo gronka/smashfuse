@@ -15,6 +15,7 @@ html
 	script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
 	script(type="text/javascript", src="#{req.rootDir}js/libs/bootstrap.js")
 	script(type="text/javascript", src="#{req.rootDir}js/libs/jquery-ui.min.js")
+	script(type="text/javascript", src="#{req.rootDir}js/libs/jquery.waypoints.min.js")
 	script(type="text/javascript", src="#{req.rootDir}js/libs/scrollReveal-2.2.0.js")
 	script(type="text/javascript", src="#{req.rootDir}js/smashfuse.js")
 

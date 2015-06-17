@@ -8,7 +8,7 @@ block body
 	section.frontpage-upper(data-speed="2", data-type="background")
 		div.container
 			div.row.text-center#frontpage-title-block
-				img(src="#{req.rootDir}images/dotmos_web_2014.png")
+				img(src="#{req.rootDir}images/2014-smashfuse-logo.png")
 
 			div.row
 				form.form-group(role="search", method="GET", action="/search")
@@ -18,5 +18,5 @@ block body
 							input.form-control#frontpage-search-input(name='q', type='text', placeholder="Search Query")
 							div.input-group-btn#frontpage-search-btn
 								button.btn.btn-default(type="submit")
-									i.glyphicon.glyphicon-search
+									i.glyphicon.glyphicon-chevron-right
 

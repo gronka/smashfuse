@@ -6,20 +6,21 @@ block title
 
 block body
 	section.searchpage-upper(data-speed="2", data-type="background")
-		div.container
-			div.row
-				div.col-xs-3
-					a(href="#{req.rootDir}")
-						img.img-responsive#navbar-logo(src="#{req.rootDir}images/dotmos_web_2014.png", max-width="500px")
-				div.col-xs-5
-					a#filter-toggle-youtube youtube
-					a#filter-toggle-twitter twitter
-				div.col-xs-4
-					form.form-group(role="search", method="GET", action="/search")
-						div.input-group.row.text-center#searchpage-search-block
-							input.form-control#searchpage-search-input(name='q', type='text', placeholder="Search Query")
-							div.input-group-btn#searchpage-search-btn
-								button.btn.btn-default(type="submit")
-									i.glyphicon.glyphicon-search
+		nav.navbar.navbar-default.navbar-fixed-top
+			div.container
+				div.row
+					div.col-xs-3
+						a(href="#{req.rootDir}")
+							img.img-responsive#navbar-logo(src="#{req.rootDir}images/2014-smashfuse-logo.png", max-width="500px")
+					div.col-xs-5
+						a#filter-toggle-youtube youtube
+						a#filter-toggle-twitter twitter
+					div.col-xs-4
+						form.form-group(role="search", method="GET", action="/search")
+							div.input-group.row.text-center#searchpage-search-block
+								input.form-control#searchpage-search-input(name='q', type='text', placeholder="Search Query")
+								div.input-group-btn#searchpage-search-btn
+									button.btn.btn-default(type="submit")
+										i.glyphicon.glyphicon-search
 
 	block content
