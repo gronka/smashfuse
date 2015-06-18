@@ -27,6 +27,7 @@ import arsd.curl;
 import std.variant;
 import std.array;
 import std.digest.md;
+import std.uri;
 
 import vibe.data.json;
 import std.json;
@@ -173,7 +174,7 @@ class SmashFuse {
 		//auto client = HTTP("https://api.twitter.com/oauth2/token");
 		//client.addRequestHeader("Authorization", "Basic ");
 		//client.postData("grant_type=client_credentials");
-		string api_url = "https://api.twitter.com/1.1/search/tweets.json?result_type=recent&count=8&lang=en&q=" ~ query;
+		string api_url = "https://api.twitter.com/1.1/search/tweets.json?result_type=recent&count=8&lang=en&q=" ~ std.uri.encodeComponent(query);
 		auto client = HTTP(api_url);
 		client.addRequestHeader("Authorization", "Bearer " ~ smf_twitterBearer);
 		string got = "";
@@ -251,7 +252,7 @@ class SmashFuse {
 				//writefln("%s: %s", key, value);
 			//}
 		auto client = HTTP();
-		string prepped_query = query.replace(" ", "+");
+		string prepped_query = std.uri.encodeComponent(query.replace(" ", "+"));
 		string api_url = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&key=AIzaSyBnFg3CxLu-SjZfSgILY2qFXzMZ7BBrPgM&q=" ~ prepped_query;
 		Json content = parseJsonString(cast(string)get(api_url, client));
 		ResultItem[] results;
