@@ -45,7 +45,6 @@ function genQueryStreamItem(result, el) {
 	//socialDirectLink.textContent = "Direct";
 	var socialDirectLinkImage = document.createElement("img");
 
-	div.className = "query-stream-item";
 	div.setAttribute('data-sr', '');
 	title.className = "qsi-title";
 	p.className = "qsi-p";
@@ -55,6 +54,7 @@ function genQueryStreamItem(result, el) {
 		default:
 			break;
 		case "youtube":
+			div.className = "query-stream-item query-stream-item-youtube";
 			title.textContent = result.title;
 			titlelink.href = result.link;
 			titlelink.appendChild(title);
@@ -76,6 +76,7 @@ function genQueryStreamItem(result, el) {
 			//div.appendChild(a);
 			break;
 		case "twitter":
+			div.className = "query-stream-item query-stream-item-twitter";
 			title.textContent = result.poster;
 
 			titlelink.href = result.posterLink;
@@ -206,9 +207,20 @@ document.getElementById("filter-toggle-youtube").onclick = function() {
 	sources.youtube.active = !sources.youtube.active;
 	if (sources.youtube.active === true) {
 		this.style.color = "green";
+		var resultItems = document.getElementsByClassName("query-stream-item-youtube");
+		for (var i=0, item; item = resultItems[i]; i++){
+			item.style.visibility = "visible";
+		}
 	} else if (sources.youtube.active === false) {
 		this.style.color = "red";
+		var resultItems = document.getElementsByClassName("query-stream-item-youtube");
+		for (var i=0, item; item = resultItems[i]; i++){
+			item.style.visibility = "hidden";
+			item.style.zindex = "5";
+			//item.style.backgroundColor = "red";
+		}
 	}
+	window.sr = new scrollReveal();
 };
 document.getElementById("filter-toggle-twitter").onclick = function() {
 	// TODO: hide function
